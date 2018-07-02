@@ -1,0 +1,428 @@
+
+/*layout*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.ydsColor {
+  color: white;
+  border: 0px;
+  background: orangered; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, orangered, darkorange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, orangered, darkorange); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, orangered, darkorange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, orangered, darkorange); /* Standard syntax (must be last) */
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: white;
+  color: black;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 1px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 13px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  height: 35px;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
+
+*:focus {
+  outline: none;
+}
+
+input:focus {
+  width: 100%;
+  /* border: 2px solid orange !important; */
+}
+
+.formAlert{
+  color: red;
+}
+
+.divide {
+  width: 49.6%;
+  display: inline-block;
+}
+
+.thumbview {
+  display: inline-block;
+  margin: 25px 25px;
+  height: 250px;
+  width: 45.5%;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px #888888;
+  position: relative;
+}
+
+.thumbview:hover {
+  overflow: auto;
+}
+
+#thum {
+  display: none;
+  background: orangered; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, orangered, darkorange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, orangered, darkorange); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, orangered, darkorange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, orangered, darkorange); /* Standard syntax (must be last) */
+  color: white;
+  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+  transition: height 1s;
+  height: 0%;
+}
+
+.thumbview:hover #thum {
+  display: block;
+  height: 15%;
+  padding: 5px 10px;
+}
+.customNav{
+  float: right;
+}
+.customNav > li > a {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul > li  {
+  display: inline-block;
+  text-align: center;
+  padding: 3px 8px;
+  text-decoration: none;
+}
+ul > li > a {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+li > h4 > a {
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1025;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+@media (min-width: 200px) and (max-width: 480px) {
+  ul {
+    display: block;
+    float: none;
+  }
+  .collapse{
+    display: block;
+    visibility: visible;
+  }
+  li {
+    display: block;
+    text-align: center;
+  }
+  .customNav > li {
+    display: block;
+    text-align: center;
+  }
+  .main-container {
+    padding: 0px 0px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .thumbview {
+    height: 250px;
+    width: 95%;
+    margin: 20px 15px;
+  }
+  .main-container{
+    padding: 0px 0px;
+  }
+}
+html, body{
+  /* background-image: url("../ydsImg/ydsbg.jpg"); */
+  background-size: contain;
+  overflow: auto;
+  background-color: #e0e0e0;
+}
+.main-container{
+  padding: 0px 50px;
+}
+.thumbview .main-container {
+  padding: 0px 0px;
+}
+.ui-grid{
+  border: 0px !important;
+}
+@media (min-width: 582px) and (max-width: 1024px) {
+  .w-xxl{
+    width: 100%;
+  }
+  .main-container{
+    padding: 0px 3px;
+  }
+}
+@media (max-width: 581px) {
+  ul > li{
+    padding: 0px 0px;
+  }
+  .w-xxl{
+    width: 100%;
+  }
+  .main-container{
+    padding: 0px 3px;
+  }
+}
+
+.field {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 49.7%;
+  border: 2px solid #aaa;
+}
+.field input {
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.field label {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-bottom: 0px;
+  right: 0; bottom: 0; left: 0;
+  font-size: 14px;
+  color: #fff;
+  background: #aaa;
+}
+.field.show-label {
+  height: 50px;
+  border-bottom-width: 0;
+}
+.field.show-label input {
+  height: 50px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+.field.show-label label {
+  height: auto;
+}
+.field {
+  transition-property: height, border-width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.field input,
+.field select {
+  transition: height 0.3s ease-in;
+}
+.field label {
+  transition: max-height 0.3s ease-in;
+}
+.field input[placeholder]::-webkit-input-placeholder {
+  transition: opacity 0.3s ease-in;
+}
+.field.show-label input[placeholder]::-webkit-input-placeholder {
+  opacity: 0;
+}
+h3, h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.editable-row-operations a {
+  margin-right: 8px;
+}
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+.ant-table {
+  overflow: inherit;
+
+}
+.ant-table-thead {
+  tr{
+    th {
+      padding: 7px;
+    }
+  }
+}
+.ant-table-tbody {
+  tr {
+    td {
+      padding: 5px;
+      word-break: normal;
+    }
+  }
+}
+.app-footer {
+  padding: 10px 0px;
+}
+
+/* Floating Label */
+:root {
+  --input-padding-x: .75rem;
+  --input-padding-y: .75rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.login-container {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.error-input {
+  border-color: red;
+}
+.form-date {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}

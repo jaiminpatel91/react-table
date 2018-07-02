@@ -1,0 +1,43 @@
+{
+  "name": "react-table",
+  "version": "1.0.0",
+  "private": true,
+  "description": "robust table with all functionality.",
+  "main": "index.js",
+  "dependencies": {
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-freeze": "^0.1.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-times": "^3.0.0",
+    "redux-devtools": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaiminpatel91/react-table.git"
+  },
+  "author": "jaimin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaiminpatel91/react-table/issues"
+  },
+  "homepage": "https://github.com/jaiminpatel91/react-table#readme"
+}
