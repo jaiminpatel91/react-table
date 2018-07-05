@@ -1,19 +1,35 @@
-import React from 'react';
+import React,{Component} from 'react';
+import Row from "./row";
 
-const Card = (props) => (
-    <div>
-        {
-            props.player ?
-                <div style={{ padding: '5px 5px 5px 5px', border: '1px solid grey', backgroundColor: 'lightgray' }}>
-                    <div style={{ display: 'inline-block' }} >
-                        <h1>hello</h1>
-                    </div>
-                    <div style={{ float: 'right' }} >
-                        {props.player}
-                    </div>
-                </div> : <h3>No players available.</h3>
+class Card extends Component {
+    render() {
+        if (!this.props.data) {
+            return null;
         }
-    </div>
-);
+
+        const style = this.props.tableStyle;
+        const rowData = this.props.data;
+        const headerList = this.props.headerList;
+
+        return(
+            <table style={style} >
+                {
+                    headerList.map((header) => {
+                        return (
+                            <th style={style}>{header}</th>
+                        )
+                    })
+                }
+                {
+                    rowData.map((row) => {
+                        return (
+                            <Row data={row} keyList={headerList} style={style} />
+                        )
+                    })
+                }
+            </table>
+        )
+    }
+}
 
 export default Card;
